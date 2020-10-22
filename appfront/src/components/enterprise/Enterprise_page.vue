@@ -82,9 +82,7 @@ export default {
       axios.get('http://127.0.0.1:8000/api/enterprise')
           .then((res) => {
             for (let i = 0; i < res.data.length; i++) {
-              if (res.data[i].available){
               enterprise.items.push(res.data[i])}
-            }
             enterprise.items.sort((a, b) => {
                 return a['id'] - b['id']
               })

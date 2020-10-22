@@ -42,8 +42,6 @@
       <a-col :span="2">
         <RightCircleTwoTone v-on:click="next_news(modal.index)" :style="{fontSize: '8vh'}"/>
       </a-col>
-
-
     </a-row>
   </a-modal>
 </template>
@@ -71,7 +69,6 @@ export default {
       index: 0,
     })
     const showmodal = (index) => {
-
       modal.visible = true
       modal.title = news.items[index].title
       modal.date = news.items[index].date
