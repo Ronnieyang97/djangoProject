@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 from sig_cn.models import Employee, News, Enterprise
 from rest_framework.response import Response
-import json
+from django.db.models import Q
 from rest_framework.views import APIView
 from .serializer import EmployeeSerializer, NewsSerializer, EnterpriseSerializer
 
@@ -64,7 +64,7 @@ class EmployeeOperationView(APIView):
 
 class NewsView(APIView):
     def get(self, request):
-        news = News.objects.all()
+        news = News.objects.filter(available=1)
         news_data = NewsSerializer(news, many=True)
         return Response(news_data.data)
 
@@ -81,3 +81,26 @@ class IndexEnterpriseView(APIView):
         index_enterprise = Enterprise.objects.filter(index=1, available=1)
         index_enterprise_data = EnterpriseSerializer(index_enterprise, many=True)
         return Response(index_enterprise_data.data)
+
+
+class SearchView(APIView):
+    def post(self, request):
+        if request.data:
+            value = request.data['value']
+            model_enterprise = Q()
+            model_enterprise.connector = 'OR'
+            model_enterprise.children.append(('name__contains', value))
+            model_enterprise.children.append(('owner__contains', value))
+            model_enterprise.children.append(('introduction__contains', value))
+            enterprise = Enterprise.objects.filter(model_enterprise, available=1)
+            enterprise_data = EnterpriseSerializer(enterprise, many=True)
+            model_news = Q()
+            model_news.connector = 'OR'
+            model_news.children.append(('title__contains', value))
+            model_news.children.append(('summary__contains', value))
+            model_news.children.append(('introduction__contains', value))
+            news = News.objects.filter(model_news, available=1)
+            news_data = NewsSerializer(news, many=True)
+            return Response([enterprise_data.data, news_data.data])
+        else:
+            return Response(0)

@@ -97,10 +97,7 @@ export default {
     onMounted(axios.get('http://127.0.0.1:8000/api/news')
         .then((res) => {
           for (let i = 0; i < res.data.length; i++) {
-            if (res.data[i].available) {
               news.items.push(res.data[i])
-            }
-            console.log(res.data[i].introduction)
           }
           news.items.sort((a, b) => {
             return a['id'] - b['id']

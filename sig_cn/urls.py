@@ -1,7 +1,5 @@
-from django.conf.urls import url, include
-from .views import EmployeeView, NewsView, EnterpriseView, IndexEnterpriseView, EmployeePartnerView, EmployeeGlobalView, \
-    EmployeeManagerView, EmployeeAdviserView, EmployeePostView, EmployeeLegalView, EmployeeOperationView
-
+from django.conf.urls import url
+from .views import *
 urlpatterns = [
     url(r'news/$', NewsView.as_view()),
     url(r'enterprise/$', EnterpriseView.as_view()),
@@ -14,4 +12,5 @@ urlpatterns = [
     url(r'employee/post_investment/$', EmployeePostView.as_view()),
     url(r'employee/legal/$', EmployeeLegalView.as_view()),
     url(r'employee/operation/$', EmployeeOperationView.as_view()),
+    url(r'search/$', SearchView.as_view()),
 ]
