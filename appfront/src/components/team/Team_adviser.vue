@@ -28,10 +28,7 @@ export default {
       axios.get('http://127.0.0.1:8000/api/employee/adviser')
           .then((res) => {
             for (let i = 0; i < res.data.length; i++) {
-              if (res.data[i].available){
                 employee.investment_adviser.push(res.data[i])}
-
-            }
             employee.investment_adviser.sort((a, b) => {
               return a['id'] - b['id']
             })

@@ -28,8 +28,7 @@ export default {
       axios.get('http://127.0.0.1:8000/api/employee/post_investment')
           .then((res) => {
             for (let i = 0; i < res.data.length; i++) {
-              if (res.data[i].available){
-                employee.post_investment.push(res.data[i])}
+                employee.post_investment.push(res.data[i])
 
             }
             employee.post_investment.sort((a, b) => {

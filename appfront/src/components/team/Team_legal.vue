@@ -26,9 +26,7 @@ export default {
       axios.get('http://127.0.0.1:8000/api/employee/legal')
           .then((res) => {
             for (let i = 0; i < res.data.length; i++) {
-              if (res.data[i].available){
-                employee.legal.push(res.data[i])}
-
+                employee.legal.push(res.data[i])
             }
             employee.legal.sort((a, b) => {
               return a['id'] - b['id']
