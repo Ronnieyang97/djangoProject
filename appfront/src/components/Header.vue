@@ -1,12 +1,17 @@
 <template>
   <a-menu mode="horizontal" class="header-bar">
-    <a-menu-item style="line-height:8vh;width: 12vw">
+    <a-menu-item style="line-height:8vh;width: 12vw;padding: 0">
       <router-link :to="'/index'">
         <img src="../assets/logo.png">
       </router-link>
     </a-menu-item>
     <a-menu-item v-for="(item, index) in routers" :key="index" class="item">
       <router-link :to="item.url" @click.passive="backtotop">{{ item.title }}</router-link>
+    </a-menu-item>
+    <a-menu-item style="line-height:8vh;width: 6vw;padding: 0">
+      <router-link :to="'/search'">
+        <SearchOutlined :style="{fontSize: '3vh'}"/>
+      </router-link>
     </a-menu-item>
   </a-menu>
   <router-view></router-view>
@@ -15,9 +20,12 @@
 
 <script>
 import {reactive} from 'vue'
-
+import {SearchOutlined} from '@ant-design/icons-vue'
 export default {
   name: 'Header',
+  components: {
+    SearchOutlined,
+  },
   setup() {
     const routers = reactive([
       {url: '/index', title: '首页'},
@@ -41,17 +49,24 @@ export default {
   line-height: 8vh;
 }
 
-.header-bar{
+.header-bar {
   font-weight: bold;
   height: 8vh;
-      list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 999;
 }
 
+.header-bar img {
+  width: 12vw;
+}
+
+.ant-menu-inline > .ant-menu-item img {
+  width: 12vw !important;
+}
 </style>

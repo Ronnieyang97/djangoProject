@@ -30,15 +30,16 @@ export default {
             for (let i = 0; i < res.data.length; i++) {
               if (res.data[i].available) {
                 employee.investment_manager.push(res.data[i])
-              }
+              }}
               employee.investment_manager.sort((a, b) => {
                 return a['id'] - b['id']
               })
               for (let i = 0; i < employee.investment_manager.length; i++) {
                 employee.investment_manager[i]['picture'] = 'http://localhost:8000' + employee.investment_manager[i]['picture']
                 employee.investment_manager[i].active = false
+                console.log(employee.investment_manager[i]['picture'])
               }
-            }}
+            }
           )
     })
 

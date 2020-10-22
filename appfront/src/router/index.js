@@ -5,6 +5,7 @@ import Contact from '../views/Contact'
 import Enterprise from '../views/Enterprise'
 import News from '../views/News'
 import Team from '../views/Team'
+import Search from '../views/Search'
 import Index_concept from "@/components/index/Index_concept";
 import Team_partner from "@/components/team/Team_partner"
 import Team_global from "@/components/team/Team_global";
@@ -119,10 +120,15 @@ const routes = [
         component: News,
     },
     {
-        path: '/Contact',
+        path: '/contact',
         name: 'Contact',
         component: Contact,
     },
+    {
+        path: '/search',
+        name: 'Search',
+        component: Search,
+    }
 ]
 
 const router = createRouter({
