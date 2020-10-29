@@ -26,7 +26,7 @@ export default {
 }
 p {
   color: white;
-  font-size: 2.2vh;
+  font-size: 2.3vh;
 }
 
 

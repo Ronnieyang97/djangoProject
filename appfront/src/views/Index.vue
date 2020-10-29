@@ -19,7 +19,7 @@ import Index_enterprise from "@/components/index/Index_enterprise";
 import Index_news from "@/components/index/Index_news";
 import Index_contact from "@/components/index/Index_contact";
 import router from "@/router";
-import {reactive} from 'vue'
+import {reactive, onMounted} from 'vue'
 
 export default {
   name: 'Index',
@@ -31,14 +31,16 @@ export default {
     Index_index,
     Index_news,
   },
+
   setup() {
     let time = reactive({
       prev: Date.now(),
-      now: Date.now()
+      now: Date.now(),
+      delay: 1000,
     })
     const slide = () => {
       time.now = Date.now()
-      if (time.now - time.prev > 1000) {
+      if (time.now - time.prev > time.delay) {
         if (window.event.deltaY > 0) {
           document.documentElement.scrollBy({
             top: window.innerHeight,
@@ -54,6 +56,9 @@ export default {
 
       }
     }
+    onMounted(()=>{
+
+    })
     return {slide}
   }
 

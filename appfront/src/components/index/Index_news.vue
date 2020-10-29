@@ -56,10 +56,4 @@ export default {
   margin-bottom: 0.5vh;
 }
 
-.index_news_down {
-  height: 8vh;
-  padding-top: 16vh;
-}
-
-
 </style>

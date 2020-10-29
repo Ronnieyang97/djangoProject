@@ -73,11 +73,6 @@ export default {
   margin-bottom: 0.5vh;
 }
 
-p {
-  color: white;
-  font-size: 2.3vh;
-}
-
 .index_concept_card {
   padding-top: 4vh;
   color: white;
