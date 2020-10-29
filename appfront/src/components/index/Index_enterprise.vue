@@ -63,20 +63,19 @@ export default {
     const enterprise = reactive({
       items: []
     })
-    const next_page = () => {
+    const next_page = () => {  //跳转下一页
       document.documentElement.scrollBy({
         top: window.innerHeight,
         behavior: "smooth",
       })
     }
-
-    onMounted(() => {
+    onMounted(() => {   //调用展示于首页的企业信息
       axios.get('http://127.0.0.1:8000/api/enterprise/index')
           .then((res) => {
-            for (let i = 0; i < res.data.length; i++) {
+            for (let i = 0; i < res.data.length; i++) {  //抓取所有数据
               enterprise.items.push(res.data[i])
             }
-            for (let i = 0; i < enterprise.items.length; i++) {
+            for (let i = 0; i < enterprise.items.length; i++) {  //给图片资源添加前缀
               enterprise.items[i]["trademark"] = 'http://localhost:8000' + enterprise.items[i]["trademark"]
               enterprise.items[i]["picture_owner"] = 'http://localhost:8000' + enterprise.items[i]["picture_owner"]
             }
@@ -89,6 +88,7 @@ export default {
 
 </script>
 <style scoped>
+/*有跑马灯组件需要使用scoped-*/
 .ant-carousel ::v-deep(.slick-slide) {
   height: 100vh;
 }
@@ -128,7 +128,6 @@ img {
   padding-left: calc(50vw - 27px);
 }
 
-
 .ant-carousel ::v-deep(.slick-arrow.custom-slick-arrow) {
   width: 10vh;
   height: 10vh;
@@ -138,9 +137,11 @@ img {
   opacity: 0.3;
   margin: 0 1vw;
 }
+
 .ant-carousel ::v-deep(.custom-slick-arrow:before) {
   display: none;
 }
+
 .ant-carousel ::v-deep(.custom-slick-arrow:hover) {
   opacity: 0.5;
 }

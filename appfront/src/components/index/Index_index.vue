@@ -23,15 +23,15 @@
 
 <script>
 import {DownOutlined} from "@ant-design/icons-vue/"
-
 import {onMounted, reactive} from 'vue'
+
 export default {
   name: 'Index_index',
   components: {
     DownOutlined,
   },
   setup() {
-    const next_page = () => {
+    const next_page = () => {  //跳转下一页
       document.documentElement.scrollBy({
         top: window.innerHeight,
         behavior: "smooth",

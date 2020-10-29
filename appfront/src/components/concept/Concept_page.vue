@@ -91,7 +91,6 @@
 <script>
 export default {
   name: 'Concept_page',
-
 }
 </script>
 

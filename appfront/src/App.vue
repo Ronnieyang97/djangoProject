@@ -1,21 +1,16 @@
 <template>
   <div id="app">
     <Header/>
-    <!--<router-view v-if="judge.routeralive"></router-view>-->
-
+    <router-view/>
   </div>
-
 </template>
 
 <script>
-
 import Header from './components/Header'
 
 export default {
   name: 'app',
   components: {Header},
-
-
 }
 </script>
 
@@ -28,6 +23,4 @@ p {
   color: white;
   font-size: 2.3vh;
 }
-
-
 </style>

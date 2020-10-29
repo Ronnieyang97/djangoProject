@@ -1,4 +1,5 @@
 <template>
+<!--页脚-->
     <a-row class="foot">
       <a-col :span="5" style="height: 20vh;line-height: 20vh"><img src="../assets/footlogo.png"></a-col>
       <a-col :span="14"></a-col>

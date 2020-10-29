@@ -41,7 +41,7 @@ import {DownOutlined} from "@ant-design/icons-vue/"
 export default {
   name: 'Index_concept',
   setup() {
-    const next_page = () => {
+    const next_page = () => {  //跳转下一页
       document.documentElement.scrollBy({
         top: window.innerHeight,
         behavior: "smooth",

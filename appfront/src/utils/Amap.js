@@ -3,7 +3,7 @@ export default function MapLoader () {   // <-- 原作者这里使用的是modul
     if (window.AMap) {
       resolve(window.AMap)
     } else {
-      var script = document.createElement('script')
+      const script = document.createElement('script');
       script.type = 'text/javascript'
       script.async = true
       script.src = 'http://webapi.amap.com/maps?v=1.3&callback=initAMap&key=ccf17bc89fb7f7438a0a2e35e0749e3a'

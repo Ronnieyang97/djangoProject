@@ -31,7 +31,7 @@ export default {
     DownOutlined,
   },
   setup() {
-    const next_page = () => {
+    const next_page = () => {   //跳转下一页
       document.documentElement.scrollBy({
         top: window.innerHeight,
         behavior: "smooth",

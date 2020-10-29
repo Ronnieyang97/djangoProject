@@ -1,7 +1,8 @@
 <template>
+<!--头部导航栏-->
   <a-menu mode="horizontal" class="header-bar">
     <a-menu-item style="line-height:8vh;width: 12vw;padding: 0">
-      <router-link :to="'/index'">
+      <router-link @click.passive="backtotop" :to="'/index'">
         <img src="../assets/logo.png">
       </router-link>
     </a-menu-item>
@@ -14,9 +15,7 @@
       </router-link>
     </a-menu-item>
   </a-menu>
-  <router-view></router-view>
 </template>
-
 
 <script>
 import {reactive} from 'vue'
@@ -27,7 +26,7 @@ export default {
     SearchOutlined,
   },
   setup() {
-    const routers = reactive([
+    const routers = reactive([  //路由对应
       {url: '/index', title: '首页'},
       {url: '/concept', title: '投资理念'},
       {url: '/team', title: '投资团队'},
@@ -35,7 +34,7 @@ export default {
       {url: '/news', title: '公司新闻'},
       {url: '/contact', title: '联系我们'},
     ])
-    const backtotop = () => {
+    const backtotop = () => {  //回到头部位置
       document.documentElement.scrollTo(0, 0)
     }
     return {routers, backtotop}

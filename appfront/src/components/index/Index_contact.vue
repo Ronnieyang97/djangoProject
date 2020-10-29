@@ -22,7 +22,6 @@
 
 <script>
 import Footer from '../Footer'
-
 import {reactive, onMounted} from 'vue'
 
 export default {
@@ -45,11 +44,11 @@ export default {
     })
     return {logo,}
   }
-
 }
 
 </script>
 <style scoped>
+/*有跑马灯组件需要使用scoped-*/
 .backgroud_index_contact {
   background-image: url("../../assets/background/index_contact.jpg");
   height: 80vh;
