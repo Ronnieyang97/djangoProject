@@ -9,8 +9,8 @@
       <a-col :span="11" class="concept_page_background1"></a-col>
       <a-col :span="11" class="concept_page_text">
         <div style="padding: 4vh 0">
-          <p style="font-size: 2.4vh; font-weight: bolder; color: black; margin: 0.8vh 3vh">我们的理念</p>
-          <p style="font-size: 3vh; font-weight: bolder; color: black; margin: 0.8vh 3vh">寻找价值洼地 赋能新生力量</p>
+          <p style="font-size: 2.4vh; font-weight: bolder; ">我们的理念</p>
+          <p style="font-size: 3vh; font-weight: bolder; ">寻找价值洼地 赋能新生力量</p>
           <p>————</p>
           <p>不信奉风口、跑道和明星</p>
           <p>不追逐风口上的“飞猪” </p>
@@ -32,7 +32,7 @@
     <a-row type="flex" justify="center">
       <a-col :span="11" class="concept_page_text" style="height: 55vh">
         <div style="padding: 6vh">
-          <p style="font-size: 3vh; font-weight: bolder; color: black; margin: 0.8vh 3vh">主要投资领域</p>
+          <p style="font-size: 3vh; font-weight: bolder;">主要投资领域</p>
           <p>———</p>
           <p style="font-size: 2vh">十余年来，海纳亚洲主要聚焦科技、传媒、消费品、现代服务、医疗、环保等领域。</p>
           <p style="font-size: 2vh">
@@ -45,7 +45,7 @@
       <a-col :span="11" class="concept_page_background3"></a-col>
       <a-col :span="11" class="concept_page_text">
         <div style="padding: 5vh 0">
-          <p style="font-size: 3vh; font-weight: bolder; color: black; margin: 0.8vh 3vh">独特优势</p>
+          <p style="font-size: 3vh; font-weight: bolder;">独特优势</p>
           <p>————</p>
           <p style="font-size: 2vh">
             十余年来，海纳亚洲已经凝聚了超过260家被投企业，并陪伴被投企业共同经历了完整的经济和投资周期，这使得我们在行业的广度、洞见的深度上积累了相当的经验。被投企业在SIG群体里可以在运营、商业路径、人才、发展战略上分享一线公司的实操经验，并与众多企业达成协同。此外，SIG作为一个全球化的金融集团，在亚洲乃至全球的网络对中国创业公司出海可给予支持，这样的支持正在发生。</p>
@@ -150,6 +150,6 @@ export default {
 .concept_page_text p {
   color: black;
   font-size: 1.6vh;
-  margin: 0.8vh 3vh;
+  margin: 0.8vh 3vw;
 }
 </style>
