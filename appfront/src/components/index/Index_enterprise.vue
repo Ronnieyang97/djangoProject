@@ -13,7 +13,7 @@
       </div>
     </template>
     <template v-slot:nextArrow>
-      <div class="custom-slick-arrow" style="right: 10px">
+      <div class="custom-slick-arrow" style="right: 10px;z-index: 1">
         <right-circle-outlined/>
       </div>
     </template>

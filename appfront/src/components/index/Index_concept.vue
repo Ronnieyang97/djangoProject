@@ -3,7 +3,7 @@
     <div class="index_concept_text">
       <p class="index_concept_title">投资理念</p>
       <p style="padding-bottom: 1vh">——————</p>
-      <p> 我们无法预测哪里有价值洼地，但出现洼地的地方，我们会出现，这是勤奋，也是风格。我们会出现，这是勤奋，也是风格。</p>
+      <p> 我们无法预测哪里有价值洼地，但出现洼地的地方，我们会出现，这是勤奋，也是风格。</p>
       <p>是我们选择了快速生成的洼地，也是新崛起的力量选择了我们。</p>
       <a-row class="index_concept_card">
         <a-col :span="8">
@@ -25,10 +25,10 @@
           <p class="card_text">除却浮云，风物长宜放眼量</p>
         </a-col>
       </a-row>
-      <div class="index_concept_down">
-        <a-button v-on:click="next_page" type="ghost" shape="circle-outline" size="large">
+      <div class="index_down_button">
+        <a-button type="ghost" shape="circle-outline" size="large" @click="next_page">
           <template v-slot:icon>
-            <DownOutlined/>
+              <DownOutlined/>
           </template>
         </a-button>
       </div>
@@ -37,6 +37,7 @@
 </template>
 <script>
 import {DownOutlined} from "@ant-design/icons-vue/"
+
 export default {
   name: 'Index_concept',
   setup() {
@@ -48,7 +49,7 @@ export default {
     }
     return {next_page}
   },
-  components:{
+  components: {
     DownOutlined,
   }
 }
@@ -93,9 +94,5 @@ p {
 .card_text {
   font-size: 2vh;
   color: rgba(255, 255, 255, 0.5);
-}
-.index_concept_down{
-    padding-top: 8vh;
-  height: 5vh;
 }
 </style>

@@ -6,15 +6,15 @@
       <p style="font-size: 3.4vh">感念际遇 不生苦毒 尊重对手 战胜自己</p>
       <p style="font-size: 2.6vh">十余年来，海纳亚洲主要聚焦投资科技、传媒、消费品、现代服务、医疗、环保等领域。</p>
     </div>
-    <div style="margin-top: 8vh" >
-    <a-button type="ghost">
-      <router-link :to="'/news'">查看更多公司新闻</router-link>
-    </a-button>
-      </div>
-    <div class="index_news_down">
-      <a-button v-on:click="next_page" type="ghost" shape="circle-outline" size="large">
+    <div style="margin-top: 8vh">
+      <a-button type="ghost">
+        <router-link :to="'/news'">查看更多公司新闻</router-link>
+      </a-button>
+    </div>
+    <div class="index_down_button">
+      <a-button type="ghost" shape="circle-outline" size="large" @click="next_page">
         <template v-slot:icon>
-          <DownOutlined/>
+            <DownOutlined/>
         </template>
       </a-button>
     </div>
@@ -55,6 +55,7 @@ export default {
   font-size: 5vh;
   margin-bottom: 0.5vh;
 }
+
 .index_news_down {
   height: 8vh;
   padding-top: 16vh;

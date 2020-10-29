@@ -32,12 +32,11 @@ export default {
         position: new AMap.LngLat(114.17077,22.270715),
         title: '香港',
       })
-      // let tokyo = new AMap.Marker({
-      //   positon: new AMap.LngLat(139.46, 35.42),
-      //   title: '东京'
-      // })  高德地图 东京的坐标无效
-      this.map.add([beijing, shanghai, hongkong,])
-      console.log(beijing)
+      let tokyo = new AMap.Marker({
+        position: new AMap.LngLat(139.46, 35.42),
+        title: '东京'
+      })
+      this.map.add([beijing, shanghai, hongkong,tokyo])
     }, e => {
       console.log('地图加载失败', e)
     })

@@ -18,6 +18,8 @@ import Index_team from "@/components/index/Index_team";
 import Index_enterprise from "@/components/index/Index_enterprise";
 import Index_news from "@/components/index/Index_news";
 import Index_contact from "@/components/index/Index_contact";
+import router from "@/router";
+import {reactive} from 'vue'
 
 export default {
   name: 'Index',
@@ -30,7 +32,7 @@ export default {
     Index_news,
   },
   setup() {
-    const slide = () => {
+    const slide1 = () => {
       if (window.event.deltaY > 0) {
         document.documentElement.scrollBy({
           top: window.innerHeight,
@@ -43,7 +45,28 @@ export default {
         })
       }
       //console.log(window.event.deltaY)  //向下+ 向上-
-      console.log("点击...");
+    }
+    let time = reactive({
+      prev: Date.now(),
+      now: Date.now()
+    })
+    const slide = () => {
+      time.now = Date.now()
+      if (time.now - time.prev > 1000) {
+        if (window.event.deltaY > 0) {
+          document.documentElement.scrollBy({
+            top: window.innerHeight,
+            behavior: "smooth",
+          })
+        } else {
+          document.documentElement.scrollBy({
+            top: -window.innerHeight,
+            behavior: "smooth",
+          })
+        }
+        time.prev = Date.now()
+
+      }
     }
 
     return {slide}

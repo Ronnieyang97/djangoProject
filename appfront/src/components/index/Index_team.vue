@@ -12,8 +12,8 @@
         <router-link :to="'/team'">查看更多团队成员</router-link>
       </a-button>
     </div>
-    <div class="index_team_down">
-      <a-button v-on:click="next_page" type="ghost" shape="circle-outline" size="large">
+    <div class="index_down_button">
+      <a-button type="ghost" shape="circle-outline" size="large" @click="next_page">
         <template v-slot:icon>
           <DownOutlined/>
         </template>

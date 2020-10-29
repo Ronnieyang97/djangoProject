@@ -1,7 +1,7 @@
 <template>
   <a-menu mode="horizontal" class="header-bar">
     <a-menu-item style="line-height:8vh;width: 12vw;padding: 0">
-      <router-link :to="'/index'">
+      <router-link :to="'/index_index'">
         <img src="../assets/logo.png">
       </router-link>
     </a-menu-item>
@@ -28,7 +28,7 @@ export default {
   },
   setup() {
     const routers = reactive([
-      {url: '/index', title: '首页'},
+      {url: '/index_index', title: '首页'},
       {url: '/concept', title: '投资理念'},
       {url: '/team', title: '投资团队'},
       {url: '/enterprise', title: '被投企业'},

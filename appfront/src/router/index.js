@@ -1,5 +1,4 @@
 import {createRouter, createWebHashHistory} from 'vue-router'
-import Index from '../views/Index'
 import Concept from '../views/Concept'
 import Contact from '../views/Contact'
 import Enterprise from '../views/Enterprise'
@@ -16,6 +15,12 @@ import Team_adviser from "@/components/team/Team_adviser"
 import Team_post_investment from "@/components/team/Team_post_investment";
 import Team_legal from "@/components/team/Team_legal";
 import Team_operation from "@/components/team/Team_operation";
+import Index_index from "@/components/index/Index_index";
+import Index_team from "@/components/index/Index_team";
+import Index_enterprise from "@/components/index/Index_enterprise";
+import Index_news from "@/components/index/Index_news";
+import Index_contact from "@/components/index/Index_contact";
+import Index from "@/views/Index";
 
 
 const routes = [
@@ -28,11 +33,6 @@ const routes = [
         path: '/index',
         name: 'Index',
         component: Index,
-    },
-    {
-        path: '/index_concept',
-        name: 'Index_concept',
-        component: Index_concept,
     },
     {
         path: '/concept',

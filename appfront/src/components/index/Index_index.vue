@@ -10,11 +10,10 @@
       <p>乂学、最右、宝宝树、博纳影业、乡村基、康辉医疗、大麦网、Adsage、今日头条、喜马拉雅、出门问问、51信用卡、返利网、声网、</p>
       <p>闪银、一条、Musical.ly、闪送、伴鱼、威马汽车、云丁科技、善诊等在内的超过260家公司.</p>
       <p>总投资金额超过20亿美金，其中60多家公司已经通过上市或者并购实现退出。</p>
-      <div class="index_down">
-        <a-button v-on:click="next_page" type="ghost" shape="circle-outline" size="large">
+      <div class="index_down_button">
+        <a-button type="ghost" shape="circle-outline" size="large" @click="next_page">
           <template v-slot:icon>
-            <DownOutlined>
-            </DownOutlined>
+              <DownOutlined/>
           </template>
         </a-button>
       </div>
@@ -24,6 +23,8 @@
 
 <script>
 import {DownOutlined} from "@ant-design/icons-vue/"
+import router from "@/router";
+import {onMounted, reactive} from 'vue'
 
 export default {
   name: 'Index_index',
@@ -37,16 +38,7 @@ export default {
         behavior: "smooth",
       })
     }
-    const test = () => {
-      if(document.documentElement.scrollTop > 0){
-        console.log('down')
-      }
-      else{
-        console.log('up')
-      }
-      console.log(document.documentElement.scrollTop)
-    }
-    return {next_page, test}
+    return {next_page}
   }
 }
 </script>
@@ -63,7 +55,7 @@ export default {
 
 p {
   color: white;
-  font-size: 2vh;
+  font-size: 2.2vh;
 }
 
 .index_text {
@@ -71,9 +63,9 @@ p {
   height: 92vh;
 }
 
-.index_down {
-  padding-top: 5vh;
+.index_down_button {
   height: 5vh;
+  padding-top: 5vh;
 }
 
 </style>
