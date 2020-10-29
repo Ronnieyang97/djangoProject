@@ -56,6 +56,4 @@ export default {
   text-align: left;
   margin-left: 15vh;
 }
-
-
 </style>
