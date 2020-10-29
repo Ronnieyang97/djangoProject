@@ -8,7 +8,6 @@
     <Index_contact></Index_contact>
     <router-view/>
   </div>
-
 </template>
 
 <script>
