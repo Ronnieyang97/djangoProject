@@ -6,6 +6,11 @@
     <Index_enterprise></Index_enterprise>
     <Index_news></Index_news>
     <Index_contact></Index_contact>
+    <a-affix style="text-align: right; height: 0; ">
+      <a-button type="primary" style="bottom: 20vh;height: 6vh">
+        <p style="font-size: 1.5vh;padding: 0.5vh 0">法律<br/>声明</p>
+      </a-button>
+    </a-affix>
     <router-view/>
   </div>
 </template>
@@ -55,7 +60,7 @@ export default {
 
       }
     }
-    onMounted(()=>{
+    onMounted(() => {
 
     })
     return {slide}
@@ -64,5 +69,7 @@ export default {
 }
 </script>
 <style>
-::-webkit-scrollbar {display:none}
+::-webkit-scrollbar {
+  display: none
+}
 </style>
