@@ -23,9 +23,8 @@
 
 <script>
 import {DownOutlined} from "@ant-design/icons-vue/"
-import router from "@/router";
-import {onMounted, reactive} from 'vue'
 
+import {onMounted, reactive} from 'vue'
 export default {
   name: 'Index_index',
   components: {
@@ -51,11 +50,6 @@ export default {
   background-position: center;
   background-size: 100% 100%;
   margin: 0;
-}
-
-p {
-  color: white;
-  font-size: 2.2vh;
 }
 
 .index_text {

@@ -5,7 +5,6 @@ import Enterprise from '../views/Enterprise'
 import News from '../views/News'
 import Team from '../views/Team'
 import Search from '../views/Search'
-import Index_concept from "@/components/index/Index_concept";
 import Team_partner from "@/components/team/Team_partner"
 import Team_global from "@/components/team/Team_global";
 import Team_manager_adviser from "@/components/team/Team_manager_adviser";
@@ -15,11 +14,6 @@ import Team_adviser from "@/components/team/Team_adviser"
 import Team_post_investment from "@/components/team/Team_post_investment";
 import Team_legal from "@/components/team/Team_legal";
 import Team_operation from "@/components/team/Team_operation";
-import Index_index from "@/components/index/Index_index";
-import Index_team from "@/components/index/Index_team";
-import Index_enterprise from "@/components/index/Index_enterprise";
-import Index_news from "@/components/index/Index_news";
-import Index_contact from "@/components/index/Index_contact";
 import Index from "@/views/Index";
 
 

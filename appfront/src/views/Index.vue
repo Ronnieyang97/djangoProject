@@ -32,20 +32,6 @@ export default {
     Index_news,
   },
   setup() {
-    const slide1 = () => {
-      if (window.event.deltaY > 0) {
-        document.documentElement.scrollBy({
-          top: window.innerHeight,
-          behavior: "smooth",
-        })
-      } else {
-        document.documentElement.scrollBy({
-          top: -window.innerHeight,
-          behavior: "smooth",
-        })
-      }
-      //console.log(window.event.deltaY)  //向下+ 向上-
-    }
     let time = reactive({
       prev: Date.now(),
       now: Date.now()
@@ -68,9 +54,11 @@ export default {
 
       }
     }
-
     return {slide}
   }
 
 }
 </script>
+<style>
+::-webkit-scrollbar {display:none}
+</style>

@@ -24,5 +24,10 @@ export default {
   text-align: center;
   height: 100vh
 }
+p {
+  color: white;
+  font-size: 2.2vh;
+}
+
 
 </style>
