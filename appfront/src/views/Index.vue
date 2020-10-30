@@ -6,11 +6,7 @@
     <Index_enterprise></Index_enterprise>
     <Index_news></Index_news>
     <Index_contact></Index_contact>
-    <a-affix style="text-align: right; height: 0; ">
-      <a-button type="primary" style="bottom: 20vh;height: 6vh">
-        <p style="font-size: 1.5vh;padding: 0.5vh 0">法律<br/>声明</p>
-      </a-button>
-    </a-affix>
+    <Index_affix></Index_affix>
     <router-view/>
   </div>
 </template>
@@ -24,7 +20,7 @@ import Index_news from "@/components/index/Index_news";
 import Index_contact from "@/components/index/Index_contact";
 import router from "@/router";
 import {reactive, onMounted} from 'vue'
-
+import Index_affix from "@/components/index/Index_affix";
 export default {
   name: 'Index',
   components: {
@@ -34,6 +30,7 @@ export default {
     Index_concept,
     Index_index,
     Index_news,
+    Index_affix,
   },
 
   setup() {
@@ -57,15 +54,12 @@ export default {
           })
         }
         time.prev = Date.now()
-
       }
     }
     onMounted(() => {
-
     })
     return {slide}
   }
-
 }
 </script>
 <style>
@@ -73,3 +67,4 @@ export default {
   display: none
 }
 </style>
+
