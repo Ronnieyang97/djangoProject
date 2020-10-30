@@ -8,7 +8,6 @@
       <div class="team_employee_name" v-if="employee.investment_adviser[index].active">
         <h1>{{ employee.investment_adviser[index].name }}</h1>
       </div>
-
     </a-col>
   </a-row>
 </template>
